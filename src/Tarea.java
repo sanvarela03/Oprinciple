@@ -1,4 +1,5 @@
-package model;
+import model.EstadoTarea;
+import model.Pendiente;
 
 public class Tarea {
     

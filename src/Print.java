@@ -1,5 +1,4 @@
-import model.Cancelada;
-import model.Tarea;
+import model.Pospuesta;
 
 public class Print {
 
@@ -7,6 +6,10 @@ public class Print {
         Tarea tarea = new Tarea();
 
         tarea.finalizar();
-       
+
+        tarea.setEstadoTarea(new Pospuesta());
+
+        tarea.finalizar();
+
     }
 }

@@ -1,15 +1,21 @@
+import model.Cancelada;
+import model.Finalizada;
 import model.Pospuesta;
 
 public class Print {
 
     public static void main(String[] args) {
+      solucion();
+
+    }
+
+    public static void solucion(){
         Tarea tarea = new Tarea();
+        CambiarEstadoTarea cambiarEstadoTarea = new CambiarEstadoTarea();
 
-        tarea.finalizar();
+        tarea.setEstadoTarea(new Finalizada());
+        cambiarEstadoTarea.finalizar(tarea);
 
-        tarea.setEstadoTarea(new Pospuesta());
-
-        tarea.finalizar();
-
+        cambiarEstadoTarea.finalizar(tarea);
     }
 }
